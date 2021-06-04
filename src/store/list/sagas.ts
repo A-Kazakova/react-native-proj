@@ -16,8 +16,8 @@ import {
   fetchListItemRejected,
 } from './actions';
 
-type WatchFetchListReq = PickAction<ListActionTypes, types.FETCH_LIST_REQUEST>;
-type WatchFetchListItemReq = PickAction<ListActionTypes, types.FETCH_LIST_ITEM_REQUEST>;
+type WatchFetchListReq = ActionType<ListActionTypes, types.FETCH_LIST_REQUEST>;
+type WatchFetchListItemReq = ActionType<ListActionTypes, types.FETCH_LIST_ITEM_REQUEST>;
 
 
 function* fetchListSaga({ payload }: any): Generator<StrictEffect, void, string> {
